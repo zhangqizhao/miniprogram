@@ -10,6 +10,7 @@ App({
     wx.login({
       success: res => {
         console.log(res)
+        this.globalData.code = res.code
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
@@ -36,6 +37,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    code: ''
   }
 })

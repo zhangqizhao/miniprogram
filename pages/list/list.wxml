@@ -1,0 +1,19 @@
+<!--pages/list/list.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" class="swiper" circular="true"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{list}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.picUrl}}" class="slide-image" mode="aspectFit"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="section">
+  <view wx:for="{{bankList}}" wx:key="index" class="flex-wrp">
+    <view class="img-content">
+      <image src="{{item.imgSrc}}" class="flex-item"></image>
+      <text class="topTips" wx:if="{{item.topTips}}">{{item.topTips}}</text>
+    </view>
+    <text class="bank">{{item.title}}</text>
+  </view>
+</view>

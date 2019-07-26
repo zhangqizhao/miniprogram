@@ -8,15 +8,9 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    time: (new Date()).toString()
+    src: ''
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
+  onLoad () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,7 +38,43 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  //事件处理函数
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  skip: function() {
+    wx.navigateTo({
+      url: '../list/list'
+    })
+  },
+  takePhoto() {
+    wx.chooseImage({
+      count: 1, // 默认9  
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
+      sourceType: ['camera'], // 可以指定来源是相册还是相机，默认二者都有  
+      success: (res) => {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        console.log(res) 
+        this.src = res.tempFilePaths[0]
+      }
+    }) 
+  },
+  error(e) {
+    console.log(e.detail)
+  },
+  tapScan() {
+    wx.scanCode({
+      success: function (res) {
+        console.log(res.result)
+      },
+      fail: function(err) {
+        console.log(err)
+      }
+    })
+  },
+  getUserInfo(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

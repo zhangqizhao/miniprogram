@@ -1,13 +1,35 @@
 {
   "pages": [
+    "pages/list/list",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "办信用卡",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "test",
+        "iconPath": "res/all.png",
+        "selectedIconPath": "res/all_select.png"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "text": "first",
+        "iconPath": "res/set.png",
+        "selectedIconPath": "res/set_select.png"
+      }
+    ]
+  }
 }
