@@ -1,35 +1,35 @@
 {
   "pages": [
-    "pages/list/list",
     "pages/index/index",
+    "pages/list/list",
     "pages/logs/logs"
   ],
+  "tabBar": {
+    "custom": false,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "卡超"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "办信用卡",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#ff0000",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "black",
-    "position": "bottom",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "test",
-        "iconPath": "res/all.png",
-        "selectedIconPath": "res/all_select.png"
-      },
-      {
-        "pagePath": "pages/learn/learn",
-        "text": "first",
-        "iconPath": "res/set.png",
-        "selectedIconPath": "res/set_select.png"
-      }
-    ]
-  }
+  "sitemapLocation": "sitemap.json"
 }
