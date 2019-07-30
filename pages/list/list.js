@@ -19,6 +19,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.setNavigationBarTitle({
+    //   title: '办信用卡'
+    // })
     let params = encodeURIComponent(JSON.stringify({
       bizParams: {
         mode: 1,
@@ -30,7 +33,6 @@ Page({
       }
     }));
 
-    // 2332
     wx.request({
       method: 'GET',
       url: `${baseUrl.dev}/page-info/index?${params}`,

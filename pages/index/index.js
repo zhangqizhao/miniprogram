@@ -4,13 +4,16 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello zack',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     src: ''
   },
-  onLoad () {
+  onLoad (options) {
+    // wx.setNavigationBarTitle({
+    //   title: '头像'
+    // })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -45,7 +48,7 @@ Page({
     })
   },
   skip: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../list/list'
     })
   },

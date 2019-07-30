@@ -8,6 +8,18 @@
     </block>
   </view>
   <view class="usermotto">
-    <button bindtap="skip">跳转</button>
+    <!-- <button type="primary" bindtap="skip">跳转</button> -->
+    <view>
+      <text>个人信息</text>
+    </view>
+    <view>
+      <text>性别： {{userInfo.gender === 1 ? '男' : '女'}}</text>
+    </view>
+    <view>
+      <text>国家： {{userInfo.country}}</text>
+    </view>
+    <view>
+      <text>语言： {{userInfo.language}}</text>
+    </view>
   </view>
 </view>
